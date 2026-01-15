@@ -435,6 +435,17 @@ Response:
 }
 ```
 
+## Screenshots
+
+<img width="769" height="890" alt="Screenshot 2026-01-15 093556" src="https://github.com/user-attachments/assets/0f26c92d-5aed-4b27-a2ed-005e6379f561" />
+<img width="1350" height="870" alt="Screenshot 2026-01-15 093610" src="https://github.com/user-attachments/assets/ce500121-3805-400b-b4f0-f28a5292b052" />
+<img width="1271" height="703" alt="Screenshot 2026-01-15 093658" src="https://github.com/user-attachments/assets/d4b3d9b6-d01b-49ea-9e6a-52c5e74aadc0" />
+<img width="1144" height="775" alt="Screenshot 2026-01-15 093820" src="https://github.com/user-attachments/assets/cc21415b-c7f9-4282-a5ba-0c246ea91cbd" />
+
+
+
+
+
 ## 🐛 Troubleshooting
 
 ### Video Not Playing
@@ -576,5 +587,6 @@ See CONTRIBUTING.md for contribution guidelines
 ---
 
 Built with ❤️from Avanish Cowkur
+
 
 
