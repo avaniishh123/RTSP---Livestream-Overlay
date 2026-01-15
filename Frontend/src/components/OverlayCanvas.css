@@ -1,0 +1,139 @@
+.overlay-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 10;
+  /* Ensure overlays don't cover video controls */
+  padding-bottom: 80px;
+  box-sizing: border-box;
+}
+
+.overlay-item {
+  pointer-events: auto;
+  cursor: move;
+}
+
+.overlay-content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px dashed rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  position: relative;
+  transition: border-color 0.2s;
+}
+
+.overlay-content:hover {
+  border-color: rgba(102, 126, 234, 0.8);
+}
+
+.text-overlay {
+  padding: 10px;
+  text-align: center;
+  word-wrap: break-word;
+  width: 100%;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.image-overlay-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.image-overlay {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.image-error-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #ff6b6b;
+  font-size: 12px;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.8);
+  padding: 8px;
+  border-radius: 4px;
+  pointer-events: none;
+}
+
+.delete-overlay-btn {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: #ff4444;
+  color: white;
+  border: 2px solid white;
+  font-size: 18px;
+  line-height: 1;
+  cursor: pointer;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+}
+
+.overlay-content:hover .delete-overlay-btn {
+  display: flex;
+}
+
+.delete-overlay-btn:hover {
+  background: #cc0000;
+  transform: scale(1.1);
+}
+
+/* YouTube Link Overlay Styles */
+.link-overlay {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+
+.youtube-link {
+  text-decoration: underline;
+  cursor: pointer;
+  font-weight: 600;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  pointer-events: auto;
+  transition: opacity 0.2s;
+  text-align: center;
+  word-wrap: break-word;
+  width: 100%;
+}
+
+.youtube-link:hover {
+  opacity: 0.8;
+}
+
+/* Ensure link overlay container allows pointer events */
+.overlay-youtube_link {
+  pointer-events: auto !important;
+}
+
+.overlay-youtube_link .link-overlay {
+  pointer-events: none; /* Container doesn't capture clicks */
+}
+
+.overlay-youtube_link .youtube-link {
+  pointer-events: auto; /* Only the link captures clicks */
+}

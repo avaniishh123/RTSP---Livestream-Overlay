@@ -1,0 +1,335 @@
+.overlay-controls {
+  color: #fff;
+}
+
+.overlay-controls h2 {
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+  color: #667eea;
+}
+
+.overlay-controls h3 {
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  color: #aaa;
+}
+
+.control-group {
+  margin-bottom: 1.5rem;
+}
+
+.control-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #aaa;
+  font-size: 0.9rem;
+}
+
+.control-group small {
+  display: block;
+  margin-top: 0.25rem;
+  color: #666;
+  font-size: 0.8rem;
+}
+
+.type-selector {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 0.5rem;
+}
+
+.type-btn {
+  padding: 0.75rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 2px solid #333;
+  color: #aaa;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-size: 0.9rem;
+}
+
+.type-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: #555;
+}
+
+.type-btn.active {
+  background: linear-gradient(45deg, #667eea 0%, #764ba2 100%);
+  border-color: #667eea;
+  color: white;
+}
+
+.control-group textarea,
+.control-group input[type="text"] {
+  width: 100%;
+  padding: 0.75rem;
+  background: rgba(0, 0, 0, 0.3);
+  border: 2px solid #333;
+  border-radius: 8px;
+  color: #fff;
+  font-size: 0.9rem;
+  font-family: inherit;
+  transition: border-color 0.3s;
+}
+
+.control-group textarea:focus,
+.control-group input[type="text"]:focus {
+  outline: none;
+  border-color: #667eea;
+}
+
+.control-group textarea {
+  resize: vertical;
+  min-height: 60px;
+}
+
+.control-group input[type="range"] {
+  width: 100%;
+  height: 6px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 3px;
+  outline: none;
+}
+
+.control-group input[type="range"]::-webkit-slider-thumb {
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  background: #667eea;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.control-group input[type="color"] {
+  width: 100%;
+  height: 40px;
+  border: 2px solid #333;
+  border-radius: 8px;
+  background: rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+}
+
+.control-group select {
+  width: 100%;
+  padding: 0.75rem;
+  background: rgba(0, 0, 0, 0.3);
+  border: 2px solid #333;
+  border-radius: 8px;
+  color: #fff;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.add-overlay-btn {
+  width: 100%;
+  padding: 1rem;
+  background: linear-gradient(45deg, #667eea 0%, #764ba2 100%);
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  margin-bottom: 2rem;
+}
+
+.add-overlay-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(102, 126, 234, 0.4);
+}
+
+.overlay-list {
+  border-top: 1px solid #333;
+  padding-top: 1.5rem;
+}
+
+.no-overlays {
+  color: #666;
+  font-style: italic;
+  text-align: center;
+  padding: 1rem;
+}
+
+.overlay-list ul {
+  list-style: none;
+  margin-bottom: 1rem;
+}
+
+.overlay-list li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding: 0.75rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 6px;
+  margin-bottom: 0.5rem;
+  transition: background 0.2s;
+}
+
+.overlay-list li:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.overlay-info {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex: 1;
+  min-width: 0;
+  flex-wrap: wrap;
+}
+
+.overlay-type-badge {
+  padding: 0.25rem 0.5rem;
+  background: #667eea;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.overlay-content-preview {
+  flex: 1;
+  color: #ccc;
+  font-size: 0.9rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  min-width: 0;
+}
+
+.delete-overlay-item-btn {
+  padding: 0.4rem 0.6rem;
+  background: rgba(255, 107, 107, 0.2);
+  border: 1px solid rgba(255, 107, 107, 0.4);
+  border-radius: 6px;
+  color: #ff6b6b;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.2s;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 36px;
+  height: 36px;
+}
+
+.delete-overlay-item-btn:hover {
+  background: rgba(255, 107, 107, 0.3);
+  border-color: #ff6b6b;
+  transform: scale(1.05);
+}
+
+.delete-overlay-item-btn:active {
+  transform: scale(0.95);
+}
+
+.delete-all-btn {
+  width: 100%;
+  padding: 0.75rem;
+  background: rgba(255, 0, 0, 0.2);
+  border: 1px solid rgba(255, 0, 0, 0.5);
+  border-radius: 8px;
+  color: #ff6b6b;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.delete-all-btn:hover {
+  background: rgba(255, 0, 0, 0.3);
+  border-color: #ff6b6b;
+}
+
+/* Image Preview Styles */
+.helper-text {
+  display: block;
+  margin-top: 0.5rem;
+  padding: 0.5rem;
+  background: rgba(102, 126, 234, 0.1);
+  border-left: 3px solid #667eea;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  line-height: 1.4;
+  color: #aaa;
+}
+
+.image-preview-container {
+  margin-top: 1rem;
+  padding: 1rem;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 8px;
+  border: 1px solid #333;
+}
+
+.preview-label {
+  font-size: 0.85rem;
+  color: #aaa;
+  margin-bottom: 0.5rem;
+}
+
+.preview-loading {
+  text-align: center;
+  color: #667eea;
+  font-size: 0.9rem;
+  padding: 1rem;
+}
+
+.image-preview {
+  width: 100%;
+  max-height: 150px;
+  object-fit: contain;
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.image-error-message {
+  margin-top: 0.5rem;
+  padding: 0.75rem;
+  background: rgba(255, 107, 107, 0.1);
+  border: 1px solid rgba(255, 107, 107, 0.3);
+  border-radius: 6px;
+  color: #ff6b6b;
+  font-size: 0.85rem;
+}
+
+.add-overlay-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* YouTube Link Styles */
+.input-error {
+  border-color: #ff6b6b !important;
+}
+
+.link-error-message {
+  margin-top: 0.5rem;
+  padding: 0.75rem;
+  background: rgba(255, 107, 107, 0.1);
+  border: 1px solid rgba(255, 107, 107, 0.3);
+  border-radius: 6px;
+  color: #ff6b6b;
+  font-size: 0.85rem;
+}
+
+.link-success-message {
+  margin-top: 0.5rem;
+  padding: 0.75rem;
+  background: rgba(74, 222, 128, 0.1);
+  border: 1px solid rgba(74, 222, 128, 0.3);
+  border-radius: 6px;
+  color: #4ade80;
+  font-size: 0.85rem;
+}
+
+.overlay-url-preview {
+  display: block;
+  color: #666;
+  font-size: 0.75rem;
+  margin-top: 0.25rem;
+  font-family: monospace;
+}
