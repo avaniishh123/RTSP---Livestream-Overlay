@@ -546,64 +546,6 @@ Livesitter-Assignment/
 - Overlay data type checking
 - SQL injection prevention (MongoDB)
 
-## 🚢 Deployment
-
-### Production Build
-
-**Backend**:
-```bash
-cd backend
-pip install -r requirements.txt
-gunicorn -w 4 -b 0.0.0.0:5000 app:app
-```
-
-**Frontend**:
-```bash
-cd frontend
-npm run build
-# Serve build/ folder with nginx or similar
-```
-
-### Environment Variables
-
-**Production `.env`**:
-```env
-MONGODB_URI=mongodb://production-host:27017/rtsp_overlay
-PORT=5000
-FLASK_ENV=production
-CORS_ORIGINS=https://yourdomain.com
-```
-
-### Nginx Configuration
-
-```nginx
-server {
-    listen 80;
-    server_name yourdomain.com;
-
-    # Frontend
-    location / {
-        root /path/to/frontend/build;
-        try_files $uri /index.html;
-    }
-
-    # Backend API
-    location /api {
-        proxy_pass http://localhost:5000;
-        proxy_http_version 1.1;
-        proxy_set_header Upgrade $http_upgrade;
-        proxy_set_header Connection 'upgrade';
-        proxy_set_header Host $host;
-        proxy_cache_bypass $http_upgrade;
-    }
-
-    # HLS Streaming
-    location /hls {
-        proxy_pass http://localhost:5000;
-        add_header Cache-Control no-cache;
-    }
-}
-```
 
 ## 📄 License
 
@@ -613,13 +555,6 @@ MIT License - See LICENSE file for details
 
 See CONTRIBUTING.md for contribution guidelines
 
-## 📞 Support
-
-For issues and questions:
-- Check troubleshooting section above
-- Review API documentation
-- Check browser console for errors
-- Review backend logs
 
 ## 🎯 Roadmap
 
@@ -640,4 +575,5 @@ For issues and questions:
 
 ---
 
-**Built with ❤️ using Flask, React, FFmpeg, and HLS.js**
+**Built with ❤️from Avanish Cowkur
+
