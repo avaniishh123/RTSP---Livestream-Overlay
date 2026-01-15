@@ -575,5 +575,6 @@ See CONTRIBUTING.md for contribution guidelines
 
 ---
 
-**Built with ❤️from Avanish Cowkur
+Built with ❤️from Avanish Cowkur
+
 
